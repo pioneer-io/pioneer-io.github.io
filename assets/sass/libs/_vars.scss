@@ -15,9 +15,8 @@ $size: (
 );
 // Font.
 $font: (
-	family: (Poppins),
-	family-header: (Rubik),
-	family-fixed: ('Courier New', monospace),
+	family: (Poppins, Arial, Helvetica, sans-serif),
+	family-header: (Rubik, Arial, Helvetica, sans-serif) family-fixed: ('Courier New', monospace),
 	weight: normal,
 	weight-bold: bold,
 	kerning-alt: 0.25em
