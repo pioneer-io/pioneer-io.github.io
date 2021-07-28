@@ -247,7 +247,7 @@ a {
 }
 
 a:hover {
-	color: #314359;
+	color: #f45459;
 }
 
 strong,
@@ -3928,7 +3928,7 @@ body.is-preload #sidebar nav ul li {
 }
 
 #intro p {
-	font-size: 1.25em;
+	font-size: 1em;
 }
 
 @media screen and (max-width: 980px) {
@@ -3949,6 +3949,7 @@ body.is-preload #sidebar nav ul li {
 	}
 }
 
+/* Misc */
 .center {
 	text-align: center;
 	justify-content: center;
@@ -3968,4 +3969,18 @@ body.is-preload #sidebar nav ul li {
 		right: 10px;
 		z-index: 1;
 	}
+}
+
+#logo-banner {
+	align-self: center;
+	justify-self: flex-end;
+	max-height: 40%;
+	max-width: 40%;
+}
+
+#logo-intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
