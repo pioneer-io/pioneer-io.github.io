@@ -1,5 +1,3 @@
-/* @import url(fontawesome-all.min.css); */
-
 :root {
 	--first-partition: 25%;
 	--second-partition: 10rem;
@@ -12,6 +10,7 @@
 		url('../fonts/Poppins-Black.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -20,6 +19,7 @@
 		url('../fonts/Poppins-BlackItalic.woff2') format('woff2'), url('../fonts/Poppins-BlackItalic.woff') format('woff');
 	font-weight: 700;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -28,6 +28,7 @@
 		url('../fonts/Poppins-Bold.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -36,6 +37,7 @@
 		url('../fonts/Poppins-BoldItalic.woff2') format('woff2'), url('../fonts/Poppins-BoldItalic.woff') format('woff');
 	font-weight: 500;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -45,6 +47,7 @@
 		url('../fonts/Poppins-ExtraBoldItalic.woff') format('woff');
 	font-weight: 900;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -53,6 +56,7 @@
 		url('../fonts/Poppins-ExtraBold.woff') format('woff');
 	font-weight: 900;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -61,6 +65,7 @@
 		url('../fonts/Poppins-ExtraLight.woff2') format('woff2'), url('../fonts/Poppins-ExtraLight.woff') format('woff');
 	font-weight: 100;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -70,6 +75,7 @@
 		url('../fonts/Poppins-ExtraLightItalic.woff') format('woff');
 	font-weight: 100;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -78,6 +84,7 @@
 		url('../fonts/Poppins-Italic.woff') format('woff');
 	font-weight: 400;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -86,6 +93,7 @@
 		url('../fonts/Poppins-Light.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -94,6 +102,7 @@
 		url('../fonts/Poppins-LightItalic.woff2') format('woff2'), url('../fonts/Poppins-LightItalic.woff') format('woff');
 	font-weight: 300;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -102,6 +111,7 @@
 		url('../fonts/Poppins-Medium.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -110,6 +120,7 @@
 		url('../fonts/Poppins-MediumItalic.woff2') format('woff2'), url('../fonts/Poppins-MediumItalic.woff') format('woff');
 	font-weight: 500;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -118,6 +129,7 @@
 		url('../fonts/Poppins-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -126,6 +138,7 @@
 		url('../fonts/Poppins-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
+	font-display: swap;
 }
 
 /* Rubik */
@@ -136,6 +149,7 @@
 		url('../fonts/Rubik-Black.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -144,6 +158,7 @@
 		url('../fonts/Rubik-BlackItalic.woff') format('woff');
 	font-weight: 700;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -152,6 +167,7 @@
 		url('../fonts/Rubik-Bold.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -160,6 +176,7 @@
 		url('../fonts/Rubik-BoldItalic.woff') format('woff');
 	font-weight: 500;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -168,6 +185,7 @@
 		url('../fonts/Rubik-Italic.woff') format('woff');
 	font-weight: 400;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -176,6 +194,7 @@
 		url('../fonts/Rubik-Light.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -184,6 +203,7 @@
 		url('../fonts/Rubik-LightItalic.woff') format('woff');
 	font-weight: 300;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -192,6 +212,7 @@
 		url('../fonts/Rubik-Medium.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -200,6 +221,7 @@
 		url('../fonts/Rubik-MediumItalic.woff2') format('woff2'), url('../fonts/Rubik-MediumItalic.woff') format('woff');
 	font-weight: 500;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -208,6 +230,7 @@
 		url('../fonts/Rubik-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
+	font-display: swap;
 }
 
 html,
@@ -392,6 +415,7 @@ html {
 
 body {
 	background: #314359;
+	font-family: Poppins;
 }
 
 body.is-preload *,
@@ -414,7 +438,7 @@ input,
 select,
 textarea {
 	color: rgba(0, 0, 0 0.95);
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Poppins;
 	font-size: 16.5pt;
 	font-weight: normal;
 	line-height: 1.75;
@@ -448,9 +472,6 @@ textarea {
 }
 
 a {
-	/* -moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-	-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-	-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease; */
 	transition: color 0.2s ease, border-bottom-color 0.2s ease;
 	color: inherit;
 	text-decoration: none;
@@ -462,7 +483,7 @@ a:hover {
 
 strong,
 b {
-	color: #000000;
+	color: #f45459;
 	font-weight: bold;
 }
 
@@ -481,7 +502,8 @@ h3,
 h4,
 h5,
 h6 {
-	color: #000000;
+	font-family: Rubik;
+	color: #f45459;
 	font-weight: bold;
 	line-height: 1.5;
 	margin: 0 0 0.5em 0;
@@ -2132,9 +2154,9 @@ button,
 	transition: border-color 0.2s ease;
 	background-color: transparent;
 	border: solid 1px !important;
-	border-color: rgba(0, 0, 0, 0.15) !important;
+	border-color: rgba(49, 67, 89, 0.15) !important;
 	border-radius: 3em;
-	color: #000000 !important;
+	color: #f45459 !important;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 0.6em;
@@ -2165,7 +2187,7 @@ button:after,
 	-webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
 	-ms-transition: opacity 0.2s ease, -ms-transform 0.2s ease;
 	transition: opacity 0.2s ease, transform 0.2s ease;
-	background: #000000;
+	background: #f45459;
 	border-radius: 3em;
 	content: '';
 	height: 100%;
@@ -2213,7 +2235,7 @@ input[type="reset"].primary,
 input[type="button"].primary,
 button.primary,
 .button.primary {
-	background-color: #000000;
+	background-color: #f45459;
 	color: #314359 !important;
 }
 
@@ -2245,7 +2267,7 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-	border-color: rgba(0, 0, 0, 0.85) !important;
+	border-color: rgba(49, 67, 89, 0.85) !important;
 }
 
 input[type="submit"]:hover:after,
@@ -2265,7 +2287,7 @@ input[type="reset"]:hover:active,
 input[type="button"]:hover:active,
 button:hover:active,
 .button:hover:active {
-	border-color: #000000 !important;
+	border-color: #f45459 !important;
 }
 
 input[type="submit"]:hover:active:after,
@@ -4020,25 +4042,8 @@ body.is-ie #sidebar > .inner {
 	right: 0;
 	width: 100%;
 }
-/* 
-#sidebar nav a:before {
-	background: #f5f5f5;
-} */
-
-/* #sidebar nav a:after {
-	background-image: -moz-linear-gradient(to right, #9ebeb9, #314359);
-	background-image: -webkit-linear-gradient(to right, #9ebeb9, #314359);
-	background-image: -ms-linear-gradient(to right, #9ebeb9, #314359);
-	background-image: linear-gradient(to right, #9ebeb9, #314359);
-	-moz-transition: max-width 0.2s ease;
-	-webkit-transition: max-width 0.2s ease;
-	-ms-transition: max-width 0.2s ease;
-	transition: max-width 0.2s ease;
-	max-width: 0;
-} */
 
 #sidebar nav a:hover {
-	/* color: rgba(0, 0, 0, 0.75); */
 	color: #f45459;
 }
 
@@ -4066,64 +4071,6 @@ body.is-preload #sidebar nav ul li {
 	#sidebar {
 		width: var(--first-partition);
 	}
-	/* #sidebar {
-		height: 5em;
-		left: 0;
-		line-height: 1.5em;
-		overflow: hidden;
-		padding: 0;
-		text-align: center;
-		top: 0;
-		width: 100%;
-	} */
-
-	/* #sidebar > .inner {
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-moz-align-items: -moz-stretch;
-		-webkit-align-items: -webkit-stretch;
-		-ms-align-items: -ms-stretch;
-		align-items: stretch;
-		height: inherit;
-		line-height: inherit;
-		padding: 0.5em;
-	}
-
-	#sidebar nav {
-		height: 4em;
-		line-height: inherit;
-	}
-
-	#sidebar nav ul {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		height: inherit;
-		line-height: inherit;
-	}
-
-	#sidebar nav ul li {
-		display: block;
-		height: inherit;
-		line-height: inherit;
-		margin: 0 0 0 2em;
-		padding: 0;
-		flex-shrink: 3;
-	}
-
-	#sidebar nav a {
-		height: inherit;
-		line-height: inherit;
-		padding: 0;
-	} */
-
-	/* #sidebar nav a:after {
-		background-image: none;
-		background-color: #;
-	} */
 }
 
 @media screen and (max-width: 736px) {
