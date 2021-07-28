@@ -1,3 +1,8 @@
+:root {
+	--first-partition: 25%;
+	--second-partition: 10rem;
+}
+
 /* Font Face Declarations */
 @font-face {
 	font-family: 'Poppins';
@@ -3752,14 +3757,15 @@ body.is-preload .wrapper.fade > .inner {
 
 @media screen and (max-width: 1280px) {
 	#sidebar + #wrapper {
-		margin-left: 0;
-		padding-top: 3.5em;
+		margin-left: var(--first-partition);
+		/* padding-top: 3.5em; */
 	}
 }
 
 @media screen and (max-width: 736px) {
 	#sidebar + #wrapper {
 		padding-top: 0;
+		margin-left: var(--second-partition);
 	}
 }
 
@@ -4036,25 +4042,8 @@ body.is-ie #sidebar > .inner {
 	right: 0;
 	width: 100%;
 }
-/* 
-#sidebar nav a:before {
-	background: #f5f5f5;
-} */
-
-/* #sidebar nav a:after {
-	background-image: -moz-linear-gradient(to right, #9ebeb9, #314359);
-	background-image: -webkit-linear-gradient(to right, #9ebeb9, #314359);
-	background-image: -ms-linear-gradient(to right, #9ebeb9, #314359);
-	background-image: linear-gradient(to right, #9ebeb9, #314359);
-	-moz-transition: max-width 0.2s ease;
-	-webkit-transition: max-width 0.2s ease;
-	-ms-transition: max-width 0.2s ease;
-	transition: max-width 0.2s ease;
-	max-width: 0;
-} */
 
 #sidebar nav a:hover {
-	/* color: rgba(0, 0, 0, 0.75); */
 	color: #f45459;
 }
 
@@ -4080,68 +4069,14 @@ body.is-preload #sidebar nav ul li {
 
 @media screen and (max-width: 1280px) {
 	#sidebar {
-		height: 5em;
-		left: 0;
-		line-height: 1.5em;
-		overflow: hidden;
-		padding: 0;
-		text-align: center;
-		top: 0;
-		width: 100%;
+		width: var(--first-partition);
 	}
-
-	#sidebar > .inner {
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-moz-align-items: -moz-stretch;
-		-webkit-align-items: -webkit-stretch;
-		-ms-align-items: -ms-stretch;
-		align-items: stretch;
-		height: inherit;
-		line-height: inherit;
-		padding: 0.5em;
-	}
-
-	#sidebar nav {
-		height: 4em;
-		line-height: inherit;
-	}
-
-	#sidebar nav ul {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		height: inherit;
-		line-height: inherit;
-	}
-
-	#sidebar nav ul li {
-		display: block;
-		height: inherit;
-		line-height: inherit;
-		margin: 0 0 0 2em;
-		padding: 0;
-		flex-shrink: 3;
-	}
-
-	#sidebar nav a {
-		height: inherit;
-		line-height: inherit;
-		padding: 0;
-	}
-
-	/* #sidebar nav a:after {
-		background-image: none;
-		background-color: #;
-	} */
 }
 
 @media screen and (max-width: 736px) {
 	#sidebar {
-		display: none;
+		/* display: none; */
+		width: var(--second-partition);
 	}
 }
 
