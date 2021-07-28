@@ -1,5 +1,10 @@
 /* @import url(fontawesome-all.min.css); */
 
+:root {
+	--first-partition: 25%;
+	--second-partition: 10rem;
+}
+
 /* Font Face Declarations */
 @font-face {
 	font-family: 'Poppins';
@@ -3730,14 +3735,15 @@ body.is-preload .wrapper.fade > .inner {
 
 @media screen and (max-width: 1280px) {
 	#sidebar + #wrapper {
-		margin-left: 0;
-		padding-top: 3.5em;
+		margin-left: var(--first-partition);
+		/* padding-top: 3.5em; */
 	}
 }
 
 @media screen and (max-width: 736px) {
 	#sidebar + #wrapper {
 		padding-top: 0;
+		margin-left: var(--second-partition);
 	}
 }
 
@@ -4058,6 +4064,9 @@ body.is-preload #sidebar nav ul li {
 
 @media screen and (max-width: 1280px) {
 	#sidebar {
+		width: var(--first-partition);
+	}
+	/* #sidebar {
 		height: 5em;
 		left: 0;
 		line-height: 1.5em;
@@ -4066,9 +4075,9 @@ body.is-preload #sidebar nav ul li {
 		text-align: center;
 		top: 0;
 		width: 100%;
-	}
+	} */
 
-	#sidebar > .inner {
+	/* #sidebar > .inner {
 		-moz-flex-direction: column;
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
@@ -4109,7 +4118,7 @@ body.is-preload #sidebar nav ul li {
 		height: inherit;
 		line-height: inherit;
 		padding: 0;
-	}
+	} */
 
 	/* #sidebar nav a:after {
 		background-image: none;
@@ -4119,7 +4128,8 @@ body.is-preload #sidebar nav ul li {
 
 @media screen and (max-width: 736px) {
 	#sidebar {
-		display: none;
+		/* display: none; */
+		width: var(--second-partition);
 	}
 }
 
