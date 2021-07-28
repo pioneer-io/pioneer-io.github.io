@@ -15,7 +15,7 @@ $size: (
 );
 // Font.
 $font: (
-	family: (Arial, Helvetica, sans-serif),
+	family: (Poppins, Arial, Helvetica, sans-serif),
 	family-fixed: ('Courier New', monospace),
 	weight: normal,
 	weight-bold: bold,
@@ -23,8 +23,8 @@ $font: (
 );
 // Palette.
 $palette: (
-	bg: #1a4451,
-	bg-alt: darken(#1a4451, 5),
+	bg: #314359,
+	bg-alt: darken(#314359, 5),
 	fg: rgba(0, 0, 0, 0.95),
 	fg-bold: #000000,
 	fg-light: rgba(0, 0, 0, 0.699),
