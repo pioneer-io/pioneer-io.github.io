@@ -1,5 +1,210 @@
 /* @import url(fontawesome-all.min.css); */
 
+/* Font Face Declarations */
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Black.ttf') format('truetype'), url('../fonts/Poppins-Black.woff') format('woff2'),
+		url('../fonts/Poppins-Black.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-BlackItalic.ttf') format('truetype'),
+		url('../fonts/Poppins-BlackItalic.woff2') format('woff2'), url('../fonts/Poppins-BlackItalic.woff') format('woff');
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Bold.ttf') format('truetype'), url('../fonts/Poppins-Bold.woff2') format('woff2'),
+		url('../fonts/Poppins-Bold.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-BoldItalic.ttf') format('truetype'),
+		url('../fonts/Poppins-BoldItalic.woff2') format('woff2'), url('../fonts/Poppins-BoldItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-ExtraBoldItalic.ttf') format('truetype'),
+		url('../fonts/Poppins-ExtraBoldItalic.woff2') format('woff2'),
+		url('../fonts/Poppins-ExtraBoldItalic.woff') format('woff');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-ExtraBold.ttf') format('truetype'), url('../fonts/Poppins-ExtraBold.woff2') format('woff2'),
+		url('../fonts/Poppins-ExtraBold.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-ExtraLight.ttf') format('truetype'),
+		url('../fonts/Poppins-ExtraLight.woff2') format('woff2'), url('../fonts/Poppins-ExtraLight.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-ExtraLightItalic.ttf') format('truetype'),
+		url('../fonts/Poppins-ExtraLightItalic.woff2') format('woff2'),
+		url('../fonts/Poppins-ExtraLightItalic.woff') format('woff');
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Italic.ttf') format('truetype'), url('../fonts/Poppins-Italic.woff2') format('woff2'),
+		url('../fonts/Poppins-Italic.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Light.ttf') format('truetype'), url('../fonts/Poppins-Light.woff2') format('woff2'),
+		url('../fonts/Poppins-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-LightItalic.ttf') format('truetype'),
+		url('../fonts/Poppins-LightItalic.woff2') format('woff2'), url('../fonts/Poppins-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Medium.ttf') format('truetype'), url('../fonts/Poppins-Medium.woff2') format('woff2'),
+		url('../fonts/Poppins-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-MediumItalic.ttf') format('truetype'),
+		url('../fonts/Poppins-MediumItalic.woff2') format('woff2'), url('../fonts/Poppins-MediumItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Regular.ttf') format('truetype'), url('../fonts/Poppins-Regular.woff2') format('woff2'),
+		url('../fonts/Poppins-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Regular.ttf') format('truetype'), url('../fonts/Poppins-Regular.woff2') format('woff2'),
+		url('../fonts/Poppins-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Rubik */
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('../fonts/Rubik-Black.ttf') format('truetype'), url('../fonts/Rubik-Black.woff') format('woff2'),
+		url('../fonts/Rubik-Black.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('../fonts/Rubik-BlackItalic.ttf') format('truetype'), url('../fonts/Rubik-BlackItalic.woff2') format('woff2'),
+		url('../fonts/Rubik-BlackItalic.woff') format('woff');
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('../fonts/Rubik-Bold.ttf') format('truetype'), url('../fonts/Rubik-Bold.woff2') format('woff2'),
+		url('../fonts/Rubik-Bold.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('../fonts/Rubik-BoldItalic.ttf') format('truetype'), url('../fonts/Rubik-BoldItalic.woff2') format('woff2'),
+		url('../fonts/Rubik-BoldItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('../fonts/Rubik-Italic.ttf') format('truetype'), url('../fonts/Rubik-Italic.woff2') format('woff2'),
+		url('../fonts/Rubik-Italic.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('../fonts/Rubik-Light.ttf') format('truetype'), url('../fonts/Rubik-Light.woff2') format('woff2'),
+		url('../fonts/Rubik-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('../fonts/Rubik-LightItalic.ttf') format('truetype'), url('../fonts/Rubik-LightItalic.woff2') format('woff2'),
+		url('../fonts/Rubik-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('../fonts/Rubik-Medium.ttf') format('truetype'), url('../fonts/Rubik-Medium.woff2') format('woff2'),
+		url('../fonts/Rubik-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('../fonts/Rubik-MediumItalic.ttf') format('truetype'),
+		url('../fonts/Rubik-MediumItalic.woff2') format('woff2'), url('../fonts/Rubik-MediumItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('../fonts/Rubik-Regular.ttf') format('truetype'), url('../fonts/Rubik-Regular.woff2') format('woff2'),
+		url('../fonts/Rubik-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
 html,
 body,
 div,
