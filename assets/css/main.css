@@ -2626,11 +2626,11 @@ input[type="radio"] + label:before {
 }
 
 .wrapper.style2 .icon.major:before {
-	color: #f5f5f5;
+	color: #f45459;
 }
 
 .wrapper.style2-alt .icon.major:before {
-	color: #f5f5f5;
+	color: #f45459;
 }
 
 .wrapper.style3 .icon.major:before {
@@ -3311,11 +3311,11 @@ table.alt tfoot {
 }
 
 .wrapper.style2 {
-	background-color: #f5f5f5;
+	background-color: #f45459;
 }
 
 .wrapper.style2-alt {
-	background-color: #f5f5f5;
+	background-color: #f45459;
 }
 
 .wrapper.style3 {
@@ -3827,11 +3827,12 @@ body.is-ie #sidebar > .inner {
 } */
 
 #sidebar nav a:hover {
-	color: rgba(0, 0, 0, 0.75);
+	/* color: rgba(0, 0, 0, 0.75); */
+	color: #f45459;
 }
 
 #sidebar nav a.active {
-	color: #000000;
+	color: #f45459;
 }
 
 #sidebar nav a.active:after {
