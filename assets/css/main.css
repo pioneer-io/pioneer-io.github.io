@@ -7,6 +7,7 @@
 		url('../fonts/Poppins-Black.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -15,6 +16,7 @@
 		url('../fonts/Poppins-BlackItalic.woff2') format('woff2'), url('../fonts/Poppins-BlackItalic.woff') format('woff');
 	font-weight: 700;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -23,6 +25,7 @@
 		url('../fonts/Poppins-Bold.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -31,6 +34,7 @@
 		url('../fonts/Poppins-BoldItalic.woff2') format('woff2'), url('../fonts/Poppins-BoldItalic.woff') format('woff');
 	font-weight: 500;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -40,6 +44,7 @@
 		url('../fonts/Poppins-ExtraBoldItalic.woff') format('woff');
 	font-weight: 900;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -48,6 +53,7 @@
 		url('../fonts/Poppins-ExtraBold.woff') format('woff');
 	font-weight: 900;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -56,6 +62,7 @@
 		url('../fonts/Poppins-ExtraLight.woff2') format('woff2'), url('../fonts/Poppins-ExtraLight.woff') format('woff');
 	font-weight: 100;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -65,6 +72,7 @@
 		url('../fonts/Poppins-ExtraLightItalic.woff') format('woff');
 	font-weight: 100;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -73,6 +81,7 @@
 		url('../fonts/Poppins-Italic.woff') format('woff');
 	font-weight: 400;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -81,6 +90,7 @@
 		url('../fonts/Poppins-Light.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -89,6 +99,7 @@
 		url('../fonts/Poppins-LightItalic.woff2') format('woff2'), url('../fonts/Poppins-LightItalic.woff') format('woff');
 	font-weight: 300;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -97,6 +108,7 @@
 		url('../fonts/Poppins-Medium.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -105,6 +117,7 @@
 		url('../fonts/Poppins-MediumItalic.woff2') format('woff2'), url('../fonts/Poppins-MediumItalic.woff') format('woff');
 	font-weight: 500;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -113,6 +126,7 @@
 		url('../fonts/Poppins-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -121,6 +135,7 @@
 		url('../fonts/Poppins-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
+	font-display: swap;
 }
 
 /* Rubik */
@@ -131,6 +146,7 @@
 		url('../fonts/Rubik-Black.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -139,6 +155,7 @@
 		url('../fonts/Rubik-BlackItalic.woff') format('woff');
 	font-weight: 700;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -147,6 +164,7 @@
 		url('../fonts/Rubik-Bold.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -155,6 +173,7 @@
 		url('../fonts/Rubik-BoldItalic.woff') format('woff');
 	font-weight: 500;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -163,6 +182,7 @@
 		url('../fonts/Rubik-Italic.woff') format('woff');
 	font-weight: 400;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -171,6 +191,7 @@
 		url('../fonts/Rubik-Light.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -179,6 +200,7 @@
 		url('../fonts/Rubik-LightItalic.woff') format('woff');
 	font-weight: 300;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -187,6 +209,7 @@
 		url('../fonts/Rubik-Medium.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -195,6 +218,7 @@
 		url('../fonts/Rubik-MediumItalic.woff2') format('woff2'), url('../fonts/Rubik-MediumItalic.woff') format('woff');
 	font-weight: 500;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -203,6 +227,7 @@
 		url('../fonts/Rubik-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
+	font-display: swap;
 }
 
 html,
@@ -476,7 +501,8 @@ h3,
 h4,
 h5,
 h6 {
-	color: #000000;
+	font-family: Rubik;
+	color: #f45459;
 	font-weight: bold;
 	line-height: 1.5;
 	margin: 0 0 0.5em 0;
