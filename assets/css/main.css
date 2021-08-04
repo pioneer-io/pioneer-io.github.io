@@ -4022,7 +4022,7 @@ body.is-ie #sidebar > .inner {
 	color: rgba(245, 245, 245, 0.95);
 	display: block;
 	font-size: 0.6em;
-	font-weight: bold;
+	/* font-weight: bold; */
 	letter-spacing: 0.25em;
 	line-height: 1.75;
 	outline: 0;
