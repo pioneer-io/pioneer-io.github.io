@@ -3716,6 +3716,15 @@ body.is-preload .wrapper.fade > .inner {
 	color: #000000;
 }
 
+.subsection {
+	font-size: 0.8em;
+	letter-spacing: 0.25em;
+	color: #f45459;
+	opacity: 1;
+	list-style: none;
+	margin: 0;
+}
+
 @media screen and (max-width: 736px) {
 	#header {
 		padding: 1em 2em;
