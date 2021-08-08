@@ -17,7 +17,8 @@
 							<li><a href="#intro">Pioneer</a></li>
 							<li><a href="#one">1. Introduction and Use Case</a>
 								<ul class="subsection">
-									<li><a href="#1.1">SECTION 1.1</a></li>
+									<li><a href="#test">SECTION 1.1</a></li>
+									<li><a href="#test2">SECTION 1.1</a></li>
 								</ul>
 							</li>
 							<li><a href="#two">2. Potential Solutions</a></li>
@@ -62,12 +63,22 @@
 									<p>When transitioning from a monolith to a microservices-oriented architecture, an organization may only want to expose the new service to a small number of users while the organization collects analytics and user feedback, and analyzes how the service performs under various loads. When using feature flags to handle this transition, any change can be quickly rolled back in real-time simply by toggling the flag off; no re-deployment is necessary.</p>
 								</div>
 								<div class="inner">
-									<section id="1.1" class="wrapper style1 spotlights"><h3 id="1.1">1.1 Hypothetical</h3></section>
-									<p>Harvest Delivery is a regional shopping service that allows users to order groceries online. A locally-contracted shopper purchases the requested groceries and delivers them to the doorstep of the user. Harvest Delivery’s web application receives a variable amount of user traffic, with the highest amount of traffic occurring in the days leading up to major holidays.</p>
-									<p>Harvest Delivery’s web application is currently a monolith. As the organization grows and adds more features for users, the monolithic architecture begins to cause a strain on the engineering team. The CTO would like for the application code to be more loosely coupled in order to maximize developer efficiency and scale pieces of the application independently. Additionally, she would like to see the system architecture organized around business concerns such as the shopping catalog, payment processing, and shopper communication.</p>
-									<p>Harvest Delivery’s CTO directs the engineering team to extract these three features out into separate microservices. However, it’s important that this change does not impact user experience. The holidays are coming up, and Harvest Delivery doesn’t want to sacrifice any revenue.</p>
-									<p>Harvest Delivery plans to collect analytics and perform load testing on the new services to ensure that they can handle the load of holiday shopping sprees.  They also plan to solicit user feedback from a percentage of users before rolling these new services out to all users.</p>
-									<p>Harvest Delivery’s CTO plans to implement this transition via parallel change - a migration phase that takes place until all users have been routed to the new service. If there are problems found with the new service during this transition time, the rollback strategy is simply to re-route users back to the pre-existing monolith until the problem has been fixed.</p>
+									<section id="test">
+									<h3 id="test">1.1 Hypothetical</h3>
+										<p>Harvest Delivery is a regional shopping service that allows users to order groceries online. A locally-contracted shopper purchases the requested groceries and delivers them to the doorstep of the user. Harvest Delivery’s web application receives a variable amount of user traffic, with the highest amount of traffic occurring in the days leading up to major holidays.</p>
+										<p>Harvest Delivery’s web application is currently a monolith. As the organization grows and adds more features for users, the monolithic architecture begins to cause a strain on the engineering team. The CTO would like for the application code to be more loosely coupled in order to maximize developer efficiency and scale pieces of the application independently. Additionally, she would like to see the system architecture organized around business concerns such as the shopping catalog, payment processing, and shopper communication.</p>
+										<p>Harvest Delivery’s CTO directs the engineering team to extract these three features out into separate microservices. However, it’s important that this change does not impact user experience. The holidays are coming up, and Harvest Delivery doesn’t want to sacrifice any revenue.</p>
+										<p>Harvest Delivery plans to collect analytics and perform load testing on the new services to ensure that they can handle the load of holiday shopping sprees.  They also plan to solicit user feedback from a percentage of users before rolling these new services out to all users.</p>
+										<p>Harvest Delivery’s CTO plans to implement this transition via parallel change - a migration phase that takes place until all users have been routed to the new service. If there are problems found with the new service during this transition time, the rollback strategy is simply to re-route users back to the pre-existing monolith until the problem has been fixed.</p>
+									</section>
+									<section id="test2">
+										<h3>1.1 Hypothetical</h3>
+										<p>Harvest Delivery is a regional shopping service that allows users to order groceries online. A locally-contracted shopper purchases the requested groceries and delivers them to the doorstep of the user. Harvest Delivery’s web application receives a variable amount of user traffic, with the highest amount of traffic occurring in the days leading up to major holidays.</p>
+										<p>Harvest Delivery’s web application is currently a monolith. As the organization grows and adds more features for users, the monolithic architecture begins to cause a strain on the engineering team. The CTO would like for the application code to be more loosely coupled in order to maximize developer efficiency and scale pieces of the application independently. Additionally, she would like to see the system architecture organized around business concerns such as the shopping catalog, payment processing, and shopper communication.</p>
+										<p>Harvest Delivery’s CTO directs the engineering team to extract these three features out into separate microservices. However, it’s important that this change does not impact user experience. The holidays are coming up, and Harvest Delivery doesn’t want to sacrifice any revenue.</p>
+										<p>Harvest Delivery plans to collect analytics and perform load testing on the new services to ensure that they can handle the load of holiday shopping sprees.  They also plan to solicit user feedback from a percentage of users before rolling these new services out to all users.</p>
+										<p>Harvest Delivery’s CTO plans to implement this transition via parallel change - a migration phase that takes place until all users have been routed to the new service. If there are problems found with the new service during this transition time, the rollback strategy is simply to re-route users back to the pre-existing monolith until the problem has been fixed.</p>
+									</section>
 								</div>
 							</div>
 						</section>
