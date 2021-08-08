@@ -3716,6 +3716,15 @@ body.is-preload .wrapper.fade > .inner {
 	color: #000000;
 }
 
+.subsection {
+	font-size: 0.8em;
+	letter-spacing: 0.25em;
+	color: #f45459;
+	opacity: 1;
+	list-style: none;
+	margin: 0;
+}
+
 @media screen and (max-width: 736px) {
 	#header {
 		padding: 1em 2em;
@@ -4136,8 +4145,8 @@ body.is-preload #sidebar nav ul li {
 #logo-banner {
 	align-self: center;
 	justify-self: flex-end;
-	max-height: 40%;
-	max-width: 40%;
+	max-height: 30%;
+	max-width: 30%;
 }
 
 #logo-intro {
@@ -4145,4 +4154,6 @@ body.is-preload #sidebar nav ul li {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	padding-top: 1rem;
 }
