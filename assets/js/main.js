@@ -39,6 +39,7 @@
 		var $sidebar_a = $sidebar.find('a');
 
 		var previousSubsection;
+		var previousSection = $('[href="#intro"]');
 
 		$sidebar_a
 			.addClass('scrolly')
@@ -51,10 +52,17 @@
 				// Deactivate all links.
 				if ($this.closest('.subsection').length === 0) {
 					$sidebar_a.removeClass('active');
+					previousSection = $this;
 				} else {
 					if (previousSubsection) {
 						previousSubsection.removeClass('active');
 					}
+					const currentSection = $this.closest("ul").prev();
+					if (currentSection !== previousSection) { // check if we are in the same section, if not redisplay active
+						previousSection.removeClass("active");
+						currentSection.addClass("active");
+					}
+					previousSection = currentSection;
 					previousSubsection = $this;
 				}
 				// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
@@ -82,10 +90,14 @@
 						$section.removeClass('inactive');
 
 						// No locked links? Deactivate all links and activate this section's one.
+						
 						if ($sidebar_a.filter('.active-locked').length == 0) {
-							if ($this.closest('.subsection').length === 0) {
+							previousSection = $this;
+							if ($this.closest('.subsection').length === 0) { // Check that we're not in a subsection
+								// we either scrolled into a new section or scrolled out of a subsection into just the sction
 								$sidebar_a.removeClass('active');
 							} else {
+								previousSection = $this.closest("ul").prev();
 								if (previousSubsection) {
 									previousSubsection.removeClass('active');
 								}
