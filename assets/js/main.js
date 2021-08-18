@@ -83,24 +83,18 @@
 
 						// No locked links? Deactivate all links and activate this section's one.
 						if ($sidebar_a.filter('.active-locked').length == 0) {
-							console.log("no lock");
 							if ($this.closest('.subsection').length === 0) {
-								console.log("previous", previousSubsection);
 								$sidebar_a.removeClass('active');
-								console.log('not a subsection');
 							} else {
 								if (previousSubsection) {
-									console.log('subsection');
 									previousSubsection.removeClass('active');
 								}
 								previousSubsection = $this;
 							}
-							console.log("adding class active");
 							$this.addClass('active');
 							
 						} else // if ($this.hasClass('active-locked'))
 							// Otherwise, if this section's link is the one that's locked, unlock it.
-							console.log("has lock");
 							$this.removeClass('active-locked');
 					}
 				});
