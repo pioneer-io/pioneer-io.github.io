@@ -182,7 +182,7 @@
 								<div class="inner">
 									<h2>4. Techinical Deep Dive</h2>
 									<p>Pioneer consists of three main components: Compass, NATS JetStream and Scout, all of which are run within a Docker network. Additionally, there is an SDK embedded in the user’s application.</p>
-									<img class="image fit" src="./images/pioneer_visuals/architecture.png" alt="diagram showing pioneer's architecture; there are 4 components: Compass, NATS, Scout, and SDKs">
+									<img class="image fit" src="./images/pioneer_visuals/architecture.svg" alt="diagram showing pioneer's architecture; there are 4 components: Compass, NATS, Scout, and SDKs">
 									<p>Below we will discuss each component’s role in the Pioneer architecture. For more information regarding the engineering decisions that led to this architecture, refer to <a href=”five.five”>section 5</a>.</p>
 								</div>
 								<div class="inner">
@@ -205,7 +205,7 @@
 										</div>
 										<div class="inner">
 											<h4 id="four.one.two">4.1.2 Transmitting Updated Feature Flag Data</h4>
-											<img class="image fit" src="./images/pioneer_visuals/gifs/toggle_flag/toggle_flag_diagram.gif" alt="toggle is made on Compass and the ruleset is sent down to SDKs">
+											<object data="./images/pioneer_visuals/gifs/toggle_flag/toggle_flag_diagram.svg" type="image/svg+xml"></object>
 											<p>When a Pioneer user creates, deletes or updates a feature flag, the flag dataset needs to be updated in the SDK. The transmission of updated data occurs via NATS JetStream. Any changes to the feature flag dataset results in Compass retrieving the latest data from Postgres and publishing a <code>DATA.FullRuleSet</code> message, with the flag data in the message body. Scout is a subscriber for messages with this title, as described in <a href="four.one.one">section 4.1.1</a>. Upon receipt of a <code>DATA.FullRuleSet</code> message, Scout will parse the flag data from the body and transmit the data to all connected SDK clients via SSE.</p>
 										</div>
 								</div>
