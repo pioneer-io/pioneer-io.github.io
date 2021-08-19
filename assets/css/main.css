@@ -2925,6 +2925,13 @@ input[type="radio"] + label:before {
 	width: 100%;
 }
 
+.image.fit.align {
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin: auto;
+}
+
 .image.main {
 	display: block;
 	margin: 0 0 3em 0;
