@@ -252,7 +252,7 @@
 								<div class="inner">
 									<h2>4. Techinical Deep Dive</h2>
 									<p>Pioneer consists of three main components: Compass, NATS JetStream and Scout, all of which are run within a Docker network. Additionally, there is an SDK embedded in the user’s application.</p>
-									<img class="image fit" src="./images/pioneer_visuals/architecture.png" alt="diagram showing pioneer's architecture; there are 4 components: Compass, NATS, Scout, and SDKs">
+									<img class="image fit" src="./images/pioneer_visuals/architecture.svg" alt="diagram showing pioneer's architecture; there are 4 components: Compass, NATS, Scout, and SDKs">
 									<p>Below we will discuss each component’s role in the Pioneer architecture. For more information regarding the engineering decisions that led to this architecture, refer to <a href=”five.five”>section 5</a>.</p>
 								</div>
 								<div class="inner">
@@ -264,19 +264,19 @@
 											<div class="inner">
 												<h4 id="four.one.one">4.1.1 Connection of an SDK Client</h4>
 												<p>When a Pioneer SDK client is initialized, it sends an HTTP request to the Scout daemon in order to establish a server-sent events (SSE) connection. First, the Scout daemon authorizes the SDK client via an SDK key.</p>
-												<img class="image fit" src="./images/pioneer_visuals/gifs/sdk_connects_to_scout/sdk_connects_to_scout_split1.gif" alt="SDK connects to scout and receives ruleset from Compass through Nats">
+												<object data="./images/pioneer_visuals/svgs/sdk_to_scout/sdk_to_scout1.svg" type="image/svg+xml"></object>
 												<p>Following SDK authorization, Scout will publish a message to NATS JetStream to request the latest feature flag dataset from Compass. This occurs by Scout publishing a message with the title, <code>DATA.FullRuleSetRequest</code>. NATS JetStream receives this message and if Compass is connected to NATS, the message will be sent to Compass.</p>
-												<img class="image fit" src="./images/pioneer_visuals/gifs/sdk_connects_to_scout/sdk_connects_to_scout_split2.gif" alt="SDK connects to scout and receives ruleset from Compass through Nats">
+												<object data="./images/pioneer_visuals/svgs/sdk_to_scout/sdk_to_scout2.svg" type="image/svg+xml"></object>
 												<p>Compass receives the message from NATS because it is configured as a subscriber of messages sent with that specific title. Once Compass receives the message, it sends an <code>Ack</code> back to NATS to acknowledge message receipt. If Compass is not currently connected to NATS, the message will be stored by JetStream until Compass connects to NATS and is able to receive the message.</p>
 												<p>Once Compass has received the <code>DATA.FullRuleSetRequest</code> message, it will retrieve the latest feature flag data from Postgres. Following data retrieval, Compass will publish a NATS message with the title <code>DATA.FullRuleSet</code>. Furthermore, the body of the message will contain the flag data in JSON format. </p>
-												<img class="image fit" src="./images/pioneer_visuals/gifs/sdk_connects_to_scout/sdk_connects_to_scout_split3.gif" alt="SDK connects to scout and receives ruleset from Compass through Nats">
+												<object data="./images/pioneer_visuals/svgs/sdk_to_scout/sdk_to_scout3.svg" type="image/svg+xml"></object>
 												<p>Scout subscribes to messages with the <code>DATA.FullRuleSet</code> title, and once Scout receives (and acknowledges) the NATS message, the flag data is parsed from the message body and is sent to all connected SDK clients, via SSE.</p>
-												<img class="image fit" src="./images/pioneer_visuals/gifs/sdk_connects_to_scout/sdk_connects_to_scout_split4.gif" alt="SDK connects to scout and receives ruleset from Compass through Nats">
+												<object data="./images/pioneer_visuals/svgs/sdk_to_scout/sdk_to_scout4.svg" type="image/svg+xml"></object>
 												<p>The SSE connection between the SDK client and Scout will disconnect after 30 seconds of idle activity  (see <a href="four.three">section 4.3</a> for details), forcing the SDK to reconnect to Scout. The connection process described above occurs in the same manner both during initial SDK connections and reconnections.</p>
 											</div>
 											<div class="inner">
 												<h4 id="four.one.two">4.1.2 Transmitting Updated Feature Flag Data</h4>
-												<img class="image fit" src="./images/pioneer_visuals/gifs/toggle_flag/toggle_flag_diagram.gif" alt="toggle is made on Compass and the ruleset is sent down to SDKs">
+												<object data="./images/pioneer_visuals/svgs/toggle_flag/toggle_flag_diagram.svg" type="image/svg+xml"></object>
 												<p>When a Pioneer user creates, deletes or updates a feature flag, the flag dataset needs to be updated in the SDK. The transmission of updated data occurs via NATS JetStream. Any changes to the feature flag dataset results in Compass retrieving the latest data from Postgres and publishing a <code>DATA.FullRuleSet</code> message, with the flag data in the message body. Scout is a subscriber for messages with this title, as described in <a href="four.one.one">section 4.1.1</a>. Upon receipt of a <code>DATA.FullRuleSet</code> message, Scout will parse the flag data from the body and transmit the data to all connected SDK clients via SSE.</p>
 											</div>
 									</section>
@@ -331,14 +331,14 @@
 										<h3 id="five.two">5.2 Inter-application Communication</h3>
 										<p>Our messaging service of choice, NATS JetStream, allows for decoupled messaging. Naively, we could have enabled the Scout daemon to communicate directly with the Compass API. However, Compass would then have the additional responsibility of tracking all listening Scout instances and ensuring message delivery. Using a third-party messaging tool to handle message delivery allows for a better separation of concerns, and allows Compass to only worry about publishing the correct message. We chose not to pursue Kafka because its complexity and larger infrastructure were unnecessary for our use case. NATS has a smaller infrastructure and provides all of the features that Pioneer requires.</p>
 										<p>NATS streaming allows for many-to-one communication. This means that as an organization scales, they could choose to also horizontally scale the number of Scout daemons sending updates to SDK clients. Any Scout daemon subscribed to the NATS stream would receive feature flag updates as usual. Alternatively, a logging service could also subscribe to the NATS stream and preserve messages for later analysis.</p>
-										<p>We intentionally chose to use NATS JetStream over its predecessor, Core NATS, because JetStream allows for guaranteed message delivery.</p>
+										<p>We intentionally chose to use NATS JetStream over its predecessor, Core NATS, because JetStream allows for <em>guaranteed message delivery</em>.</p>
 										<p>Take for example a situation in which the Scout daemon may temporarily go down and is not able to receive communications from the NATS server:</p>
-										<img class="image fit" src="./images/pioneer_visuals/gifs/transition_diagrams/transition_split1_line.gif" alt="scout goes down">
+										<object data="./images/pioneer_visuals/svgs/transition/transition1.svg" type="image/svg+xml"></object>
 										<p>If a flag is toggled, or some other change made that results in an updated ruleset being disseminated, the new ruleset will be sent to the NATS server. With JetStream, the message containing the updated ruleset will be queued.</p>
-										<img class="image fit" src="./images/pioneer_visuals/gifs/transition_diagrams/transition_split2_line.gif" alt="ruleset is sent but waits in nats">
+										<object data="./images/pioneer_visuals/svgs/transition/transition2.svg" type="image/svg+xml"></object>
 										<p>When the Scout daemon comes back up and communication with the NATS server is reestablished, the message will then be delivered, and Scout can then pass the updated ruleset down to connected SDKs.</p>
-										<img class="image fit" src="./images/pioneer_visuals/gifs/transition_diagrams/transition_split3_line.gif" alt="scout comes online; ruleset is then sent to scout">
-										<p>This alleviates concerns of missed messages due to an unreliable network resulting in stale feature flag data.</p>
+										<object data="./images/pioneer_visuals/svgs/transition/transition3.svg" type="image/svg+xml"></object>
+										<p>This alleviates concerns of missed messages due to network partitions resulting in stale feature flag data.</p>
 									</section>
 								</div>
 								<div class="inner">
