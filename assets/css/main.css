@@ -3727,9 +3727,21 @@ body.is-preload .wrapper.fade > .inner {
 	font-size: 0.8em;
 	letter-spacing: 0.25em;
 	color: #f45459;
-	opacity: 1;
+	opacity: 0;
 	list-style: none;
 	margin: 0;
+	height: 0;
+}
+
+.active + .subsection {
+	opacity: 1;
+	/* margin: 10px; */
+	height: inherit;
+}
+
+.subsection .active {
+	opacity: 1;
+	height: inherit;
 }
 
 @media screen and (max-width: 736px) {
