@@ -32,7 +32,7 @@
 								</ul>
 							</li>
 							<li>
-								<a href="#three">3. Introducing Pioneer?</a>
+								<a href="#three">3. Introducing Pioneer</a>
 								<ul class="subsection">
 									<li><a href="#section31">3.1 What Is Pioneer?</a></li>
 									<li><a href="#section32">3.2 Revisiting the Problem</a></li>
@@ -348,13 +348,31 @@
 								<div class="inner">
 									<section id="section53">
 										<h3 id="five.three">5.3 Providing Feature Flag Data to User Applications via SSE</h3>
-										<p>A fundamental decision in our architecture was determining the best way to send feature flag updates from Pioneer to the SDK installed in the user’s application. Options we considered included: API polling, webhooks, websockets, and streaming.</p>
-										<p>While API polling seemed to be the simplest approach, it would require SDK clients to periodically poll the Scout daemon for an update, rather than receiving flag data updates right away. This would eliminate the real-time benefits of streaming, and may also result in unnecessary network traffic.</p>
-										<p>Webhooks was another alternative we considered. Webhooks are more suitable than API polling due to their event-driven nature. While API polling is triggered by time, irrespective of whether or not a data change has occurred, with webhooks a HTTP request would only be sent in response to an event. However, this approach would require an additional HTTP endpoint to be exposed on the client application, requiring user configuration. Ultimately, we found it preferable to minimize interference with the client application.</p>
-										<p>Data could also be sent from Pioneer to SDKs via websockets. Websockets are primarily used for bi-directional communication . Although the SDK client initially sends a HTTP request to Scout to initialize an SSE connection, all subsequent messages are sent from Scout to the SDK; therefore, only unidirectional communication is required. Thus, there is no need for the bi-directional capabilities of Websockets.</p>
-										<p>Ultimately, we decided to use Server-Sent Events to enable efficient Scout-to-SDK streaming of feature flag data. This approach is an excellent tool for handling real-time data, as the single, long-lived connection provides low latency data delivery. Upon receiving a new SSE event, the SDK will parse the newly provided data and use it to evaluate feature flags.</p>
-										<p>One additional concern that we discussed was how to authorize SSE clients, in order to protect data within the feature flag ruleset. We decided to provide an SDK key to users via the Compass UI. Users must provide this SDK key when integrating an SDK into their application code in order to connect to Scout and receive feature flag data. If no valid key is provided, Scout will reject the SDK’s request to connect as an SSE client.</p>
-										<p>A potential disadvantage of using SSE is the fact that connections will close if they have been idle for more than ~30 seconds. This is due to the default behavior of the EventSource API which handles the connection. We could have configured a longer timeout period; however, the intent of the connection closing is to prevent stale and phantom connections, which is something we want to avoid. The closing of connections due to the 30 second timeout is handled automatically by the EventSource API which will reconnect after a short interval. One concern we had was how to handle unsuccessful connection requests from an SDK to Scout. We wanted the SDK to retry the connection, but to avoid swamping the daemon with requests by sending infinite unsuccessful requests to connect. We addressed this issue by adding a reconnection attempt limit to all three of our SDKs. Once the reconnection attempt limit has been reached an error message will be logged and the SSE connection will be closed.</p>
+										<ul class="alt">
+											<li>
+												<p>A fundamental decision in our architecture was determining the best way to send feature flag updates from Pioneer to the SDK installed in the user’s application. Options we considered included: API polling, webhooks, websockets, and streaming.</p>
+											</li>
+											<li>
+												<p>While API polling seemed to be the simplest approach, it would require SDK clients to periodically poll the Scout daemon for an update, rather than receiving flag data updates right away. This would eliminate the real-time benefits of streaming, and may also result in unnecessary network traffic.</p>
+												<object data="./images/pioneer_visuals/svgs/connection_types/polling.svg" type="image/svg+xml"></object>
+											</li>
+											<li>
+												<p>Webhooks was another alternative we considered. Webhooks are more suitable than API polling due to their event-driven nature. While API polling is triggered by time, irrespective of whether or not a data change has occurred, with webhooks a HTTP request would only be sent in response to an event. However, this approach would require an additional HTTP endpoint to be exposed on the client application, requiring user configuration. Ultimately, we found it preferable to minimize interference with the client application.</p>
+												<object data="./images/pioneer_visuals/svgs/connection_types/webhooks.svg" type="image/svg+xml"></object>
+											</li>
+											<li>
+												<p>Data could also be sent from Pioneer to SDKs via websockets. Websockets are primarily used for bi-directional communication . Although the SDK client initially sends a HTTP request to Scout to initialize an SSE connection, all subsequent messages are sent from Scout to the SDK; therefore, only unidirectional communication is required. Thus, there is no need for the bi-directional capabilities of Websockets.</p>
+												<object data="./images/pioneer_visuals/svgs/connection_types/websockets.svg" type="image/svg+xml"></object>
+											</li>
+											<li>
+												<p>Ultimately, we decided to use Server-Sent Events to enable efficient Scout-to-SDK streaming of feature flag data. This approach is an excellent tool for handling real-time data, as the single, long-lived connection provides low latency data delivery. Upon receiving a new SSE event, the SDK will parse the newly provided data and use it to evaluate feature flags.</p>
+												<object data="./images/pioneer_visuals/svgs/connection_types/sse.svg" type="image/svg+xml"></object>
+											</li>	
+											<li>
+												<p>One additional concern that we discussed was how to authorize SSE clients, in order to protect data within the feature flag ruleset. We decided to provide an SDK key to users via the Compass UI. Users must provide this SDK key when integrating an SDK into their application code in order to connect to Scout and receive feature flag data. If no valid key is provided, Scout will reject the SDK’s request to connect as an SSE client.</p>
+												<p>A potential disadvantage of using SSE is the fact that connections will close if they have been idle for more than ~30 seconds. This is due to the default behavior of the EventSource API which handles the connection. We could have configured a longer timeout period; however, the intent of the connection closing is to prevent stale and phantom connections, which is something we want to avoid. The closing of connections due to the 30 second timeout is handled automatically by the EventSource API which will reconnect after a short interval. One concern we had was how to handle unsuccessful connection requests from an SDK to Scout. We wanted the SDK to retry the connection, but to avoid swamping the daemon with requests by sending infinite unsuccessful requests to connect. We addressed this issue by adding a reconnection attempt limit to all three of our SDKs. Once the reconnection attempt limit has been reached an error message will be logged and the SSE connection will be closed.</p>
+											</li>
+										</ul>
 									</section>
 								</div>
 								<div class="inner">
