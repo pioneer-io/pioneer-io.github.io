@@ -357,6 +357,7 @@
 									<section id="section54">
 										<h3 id="five.four">5.4 Redis Cache</h3>
 										<p>Initially, we considered if Pioneer would require a Redis cache to offload read requests from the Compass Postgres database, when Scout requests flag data through NATS JetStream. The proposed cache would request data from the Compass API in order to initially populate, and listen for subsequent feature flag updates.</p>
+										<object data="./images/pioneer_visuals/architecture_with_redis.svg" type="image/svg+xml"></object>
 										<p>After further analysis, we determined that adding a cache to our application was not appropriate for our use case and would unnecessarily increase the complexity of Pioneer’s architecture. Because Pioneer’s intended use case involves small- or medium-sized organizations, the number of read operations on Compass’ Postgres database should be manageable without a cache.</p>
 										<p>Furthermore, due to the open-source nature of Pioneer, user organizations have the freedom to add their own cache if required.</p>
 									</section>
