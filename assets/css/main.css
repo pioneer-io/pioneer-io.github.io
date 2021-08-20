@@ -3004,11 +3004,18 @@ ul.actions {
 	list-style: none;
 	margin-left: -1em;
 	padding-left: 0;
+	flex-direction: column;
+	align-items: center;
 }
 
 ul.actions li {
-	padding: 0 0 0 1em;
+	padding: 0 0 0 0.6em;
 	vertical-align: middle;
+}
+
+#documentation {
+	margin-top: 1.4rem;
+	/* background-color: #f45459; */
 }
 
 ul.actions.special {
@@ -4175,4 +4182,12 @@ body.is-preload #sidebar nav ul li {
 	align-items: center;
 
 	padding-top: 1rem;
+}
+
+#logo-intro p {
+	margin: 0 0 1rem 0;
+}
+
+#logo-intro #available {
+	margin: 0 0 2rem 0;
 }
