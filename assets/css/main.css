@@ -2335,10 +2335,10 @@ button:hover:active:after,
 	-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
 	-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease;
 	transition: opacity 0.5s ease, transform 0.5s ease;
-	-moz-transition-delay: 1s;
-	-webkit-transition-delay: 1s;
-	-ms-transition-delay: 1s;
-	transition-delay: 1s;
+	-moz-transition-delay: .3s;
+	-webkit-transition-delay: .3s;
+	-ms-transition-delay: .3s;
+	transition-delay: .3s;
 	-moz-transform: scale(1);
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
@@ -3347,9 +3347,9 @@ body.is-ie .spotlights > section {
 }
 
 .spotlights > section > .image:before {
-	-moz-transition: opacity 1s ease;
-	-webkit-transition: opacity 1s ease;
-	-ms-transition: opacity 1s ease;
+	-moz-transition: opacity 0.5 ease;
+	-webkit-transition: opacity 0.5s ease;
+	-ms-transition: opacity 0.5s ease;
 	transition: opacity 1s ease;
 	background: #314359;
 	content: '';
@@ -3385,10 +3385,10 @@ body.is-ie .spotlights > section {
 	-webkit-transform: translateX(0) translateY(0);
 	-ms-transform: translateX(0) translateY(0);
 	transform: translateX(0) translateY(0);
-	-moz-transition: opacity 1s ease, -moz-transform 1s ease;
-	-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-	-ms-transition: opacity 1s ease, -ms-transform 1s ease;
-	transition: opacity 1s ease, transform 1s ease;
+	-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease;
+	-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+	-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease;
+	transition: opacity 0.5s ease, transform 0.5s ease;
 	opacity: 1;
 }
 
@@ -3618,10 +3618,10 @@ body.is-ie .wrapper.fullscreen {
 	-webkit-transform: translateY(0);
 	-ms-transform: translateY(0);
 	transform: translateY(0);
-	-moz-transition: opacity 1s ease, -moz-transform 1s ease;
-	-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-	-ms-transition: opacity 1s ease, -ms-transform 1s ease;
-	transition: opacity 1s ease, transform 1s ease;
+	-moz-transition: opacity 0.3s ease, -moz-transform 1s ease;
+	-webkit-transition: opacity 0.3s ease, -webkit-transform 1s ease;
+	-ms-transition: opacity 0.3s ease, -ms-transform 1s ease;
+	transition: opacity 0.3s ease, transform 1s ease;
 	opacity: 1.0;
 }
 
@@ -3639,10 +3639,10 @@ body.is-preload .wrapper.fade-up > .inner {
 	-webkit-transform: translateY(0);
 	-ms-transform: translateY(0);
 	transform: translateY(0);
-	-moz-transition: opacity 1s ease, -moz-transform 1s ease;
-	-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-	-ms-transition: opacity 1s ease, -ms-transform 1s ease;
-	transition: opacity 1s ease, transform 1s ease;
+	-moz-transition: opacity 0.3s ease, -moz-transform 1s ease;
+	-webkit-transition: opacity 0.3s ease, -webkit-transform 1s ease;
+	-ms-transition: opacity 0.3s ease, -ms-transform 1s ease;
+	transition: opacity 0.3s ease, transform 1s ease;
 	opacity: 1.0;
 }
 
@@ -3656,10 +3656,10 @@ body.is-preload .wrapper.fade-down > .inner {
 }
 
 .wrapper.fade > .inner {
-	-moz-transition: opacity 1s ease;
-	-webkit-transition: opacity 1s ease;
-	-ms-transition: opacity 1s ease;
-	transition: opacity 1s ease;
+	-moz-transition: opacity 0.3s ease;
+	-webkit-transition: opacity 0.3s ease;
+	-ms-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
 	opacity: 1.0;
 }
 
@@ -4190,4 +4190,8 @@ body.is-preload #sidebar nav ul li {
 
 #logo-intro #available {
 	margin: 0 0 2rem 0;
+}
+
+#available strong {
+	font-weight: normal;
 }
