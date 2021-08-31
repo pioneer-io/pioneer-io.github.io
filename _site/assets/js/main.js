@@ -38,6 +38,9 @@
 	if ($sidebar.length > 0) {
 		var $sidebar_a = $sidebar.find('a');
 
+		var previousSubsection;
+		var previousSection = $('[href="#intro"]');
+
 		$sidebar_a
 			.addClass('scrolly')
 			.on('click', function() {
@@ -47,8 +50,21 @@
 				if ($this.attr('href').charAt(0) != '#') return;
 
 				// Deactivate all links.
-				$sidebar_a.removeClass('active');
-
+				if ($this.closest('.subsection').length === 0) {
+					$sidebar_a.removeClass('active');
+					previousSection = $this;
+				} else {
+					if (previousSubsection) {
+						previousSubsection.removeClass('active');
+					}
+					const currentSection = $this.closest("ul").prev();
+					if (currentSection !== previousSection) { // check if we are in the same section, if not redisplay active
+						previousSection.removeClass("active");
+						currentSection.addClass("active");
+					}
+					previousSection = currentSection;
+					previousSubsection = $this;
+				}
 				// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
 				$this.addClass('active').addClass('active-locked');
 			})
@@ -74,10 +90,22 @@
 						$section.removeClass('inactive');
 
 						// No locked links? Deactivate all links and activate this section's one.
+						
 						if ($sidebar_a.filter('.active-locked').length == 0) {
-							$sidebar_a.removeClass('active');
+							previousSection = $this;
+							if ($this.closest('.subsection').length === 0) { // Check that we're not in a subsection
+								// we either scrolled into a new section or scrolled out of a subsection into just the sction
+								$sidebar_a.removeClass('active');
+							} else {
+								previousSection = $this.closest("ul").prev();
+								if (previousSubsection) {
+									previousSubsection.removeClass('active');
+								}
+								previousSubsection = $this;
+							}
 							$this.addClass('active');
-						} else if ($this.hasClass('active-locked'))
+							
+						} else // if ($this.hasClass('active-locked'))
 							// Otherwise, if this section's link is the one that's locked, unlock it.
 							$this.removeClass('active-locked');
 					}
@@ -119,7 +147,7 @@
 				x;
 
 			// Assign image.
-			$image.css('background-image', 'url(' + $img.attr('src') + ')');
+			// $image.css('background-image', 'url(' + $img.attr('src') + ')');
 
 			// Set background position.
 			if ((x = $img.data('position'))) $image.css('background-position', x);
